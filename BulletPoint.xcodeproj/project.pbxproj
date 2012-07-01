@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E560243915A05C06001A2084 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E560243815A05C06001A2084 /* UIKit.framework */; };
+		E560243B15A05C06001A2084 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E560243A15A05C06001A2084 /* Foundation.framework */; };
+		E560243D15A05C06001A2084 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E560243C15A05C06001A2084 /* CoreGraphics.framework */; };
+		E560244315A05C06001A2084 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E560244115A05C06001A2084 /* InfoPlist.strings */; };
+		E560244515A05C07001A2084 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E560244415A05C06001A2084 /* main.m */; };
+		E560244915A05C07001A2084 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E560244815A05C07001A2084 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E560243415A05C06001A2084 /* BulletPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulletPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E560243815A05C06001A2084 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E560243A15A05C06001A2084 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E560243C15A05C06001A2084 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E560244015A05C06001A2084 /* BulletPoint-Info.plist */ = {isa = PBXFileReference; path = "BulletPoint-Info.plist"; sourceTree = "<group>"; };
+		E560244215A05C06001A2084 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E560244415A05C06001A2084 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E560244615A05C07001A2084 /* BulletPoint-Prefix.pch */ = {isa = PBXFileReference; path = "BulletPoint-Prefix.pch"; sourceTree = "<group>"; };
+		E560244715A05C07001A2084 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		E560244815A05C07001A2084 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E560243115A05C06001A2084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E560243915A05C06001A2084 /* UIKit.framework in Frameworks */,
+				E560243B15A05C06001A2084 /* Foundation.framework in Frameworks */,
+				E560243D15A05C06001A2084 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E560242915A05C06001A2084 = {
+			isa = PBXGroup;
+			children = (
+				E560243E15A05C06001A2084 /* BulletPoint */,
+				E560243715A05C06001A2084 /* Frameworks */,
+				E560243515A05C06001A2084 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E560243515A05C06001A2084 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E560243415A05C06001A2084 /* BulletPoint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E560243715A05C06001A2084 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E560243815A05C06001A2084 /* UIKit.framework */,
+				E560243A15A05C06001A2084 /* Foundation.framework */,
+				E560243C15A05C06001A2084 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E560243E15A05C06001A2084 /* BulletPoint */ = {
+			isa = PBXGroup;
+			children = (
+				E560244715A05C07001A2084 /* AppDelegate.h */,
+				E560244815A05C07001A2084 /* AppDelegate.m */,
+				E560243F15A05C06001A2084 /* Supporting Files */,
+			);
+			path = BulletPoint;
+			sourceTree = "<group>";
+		};
+		E560243F15A05C06001A2084 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E560244015A05C06001A2084 /* BulletPoint-Info.plist */,
+				E560244115A05C06001A2084 /* InfoPlist.strings */,
+				E560244415A05C06001A2084 /* main.m */,
+				E560244615A05C07001A2084 /* BulletPoint-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E560243315A05C06001A2084 /* BulletPoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E560244C15A05C07001A2084 /* Build configuration list for PBXNativeTarget "BulletPoint" */;
+			buildPhases = (
+				E560243015A05C06001A2084 /* Sources */,
+				E560243115A05C06001A2084 /* Frameworks */,
+				E560243215A05C06001A2084 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BulletPoint;
+			productName = BulletPoint;
+			productReference = E560243415A05C06001A2084 /* BulletPoint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E560242B15A05C06001A2084 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E560242E15A05C06001A2084 /* Build configuration list for PBXProject "BulletPoint" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E560242915A05C06001A2084;
+			productRefGroup = E560243515A05C06001A2084 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E560243315A05C06001A2084 /* BulletPoint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E560243215A05C06001A2084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E560244315A05C06001A2084 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E560243015A05C06001A2084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E560244515A05C07001A2084 /* main.m in Sources */,
+				E560244915A05C07001A2084 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E560244115A05C06001A2084 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E560244215A05C06001A2084 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E560244A15A05C07001A2084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E560244B15A05C07001A2084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E560244D15A05C07001A2084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BulletPoint/BulletPoint-Prefix.pch";
+				INFOPLIST_FILE = "BulletPoint/BulletPoint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E560244E15A05C07001A2084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BulletPoint/BulletPoint-Prefix.pch";
+				INFOPLIST_FILE = "BulletPoint/BulletPoint-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E560242E15A05C06001A2084 /* Build configuration list for PBXProject "BulletPoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E560244A15A05C07001A2084 /* Debug */,
+				E560244B15A05C07001A2084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E560244C15A05C07001A2084 /* Build configuration list for PBXNativeTarget "BulletPoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E560244D15A05C07001A2084 /* Debug */,
+				E560244E15A05C07001A2084 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E560242B15A05C06001A2084 /* Project object */;
+}
