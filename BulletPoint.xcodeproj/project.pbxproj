@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C76D8A1B9986DC00EAB19D /* Default@2x-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C76D891B9986DC00EAB19D /* Default@2x-568h.png */; };
 		E521D1B415A1BFD600730518 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E521D1B315A1BFD600730518 /* Default@2x.png */; };
 		E54AD70715C4B8680056356B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E54AD70615C4B8320056356B /* SVProgressHUD.m */; };
 		E54AD70915C4B8EA0056356B /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E54AD70815C4B8EA0056356B /* SVProgressHUD.bundle */; };
@@ -76,6 +77,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83C76D891B9986DC00EAB19D /* Default@2x-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x-568h.png"; sourceTree = "<group>"; };
 		E521D1B315A1BFD600730518 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E54AD70515C4B8320056356B /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		E54AD70615C4B8320056356B /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		E560242915A05C06001A2084 = {
 			isa = PBXGroup;
 			children = (
+				83C76D891B9986DC00EAB19D /* Default@2x-568h.png */,
 				E5CCF42815FD469E006821AE /* Default.png */,
 				E5CCF42615FD4681006821AE /* Icon.png */,
 				E5CCF42315FD466C006821AE /* Icon.png */,
@@ -374,6 +377,7 @@
 				E5B27C9215A096430060475B /* AddItemCell.xib in Resources */,
 				E5B27C9715A099340060475B /* editbutton@2x.png in Resources */,
 				E5B27C9915A09A390060475B /* default.json in Resources */,
+				83C76D8A1B9986DC00EAB19D /* Default@2x-568h.png in Resources */,
 				E5B27CA915A0BABA0060475B /* delete@2x.png in Resources */,
 				E5B27CAD15A13E990060475B /* AddListCell.xib in Resources */,
 				E552919F15A157D50004C168 /* DoneListCell.xib in Resources */,
