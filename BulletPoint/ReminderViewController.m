@@ -120,7 +120,7 @@
 	}
 }
 
-- (NSString*)textForRow:(int)row component:(int)component {
+- (NSString*)textForRow:(long)row component:(long)component {
 	if (component == 0) {
 		NSArray* hours = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12", nil];
 		return [hours objectAtIndex:row % 12];
@@ -186,9 +186,9 @@
 - (void)done {
 	
 
-	int hourIndex = [self.pickerView selectedRowInComponent:0];
-	int minuteIndex = [self.pickerView selectedRowInComponent:1];
-	int periodIndex = [self.pickerView selectedRowInComponent:2];	
+	long hourIndex = [self.pickerView selectedRowInComponent:0];
+	long minuteIndex = [self.pickerView selectedRowInComponent:1];
+	long periodIndex = [self.pickerView selectedRowInComponent:2];
 	
 	NSString* type = self.reminder ? @"daily" : @"none";
 	NSString* hour = [self textForRow:hourIndex component:0];
@@ -207,7 +207,7 @@
 	[[AppDelegate instance].navigationController popViewControllerAnimated:YES];
 }
 
-- (id)initWithListIndex:(int)listIndex {
+- (id)initWithListIndex:(long)listIndex {
 	self = [super init];
 	
 	if (self) {

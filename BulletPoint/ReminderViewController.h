@@ -10,7 +10,7 @@
 
 @interface ReminderViewController : UIViewController
 @property (nonatomic,assign) bool reminder;
-@property (nonatomic,assign) int listIndex;
+@property (nonatomic,assign) long listIndex;
 
-- (id)initWithListIndex:(int)listIndex;
+- (id)initWithListIndex:(long)listIndex;
 @end

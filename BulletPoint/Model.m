@@ -46,29 +46,29 @@
 	[self setupNotifications];
 }
 
-- (int)numberOfLists {
+- (long)numberOfLists {
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	return lists.count;
 }
 
-- (NSString*)listNameForIndex:(int)index {
-	NSLog(@"listNameForIndex:%d",index);
+- (NSString*)listNameForIndex:(long)index {
+	NSLog(@"listNameForIndex:%ld",index);
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:index];
 	
 	return [list valueForKey:@"title"];
 }
 
-- (NSDictionary*)listForIndex:(int)index {
-	NSLog(@"listForIndex:%d",index);	
+- (NSDictionary*)listForIndex:(long)index {
+	NSLog(@"listForIndex:%ld",index);
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:index];
 	
 	return list;
 }
 
-- (NSString*)nextItemForIndex:(int)index {
-	NSLog(@"nextItemForIndex:%d",index);	
+- (NSString*)nextItemForIndex:(long)index {
+	NSLog(@"nextItemForIndex:%ld",index);
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:index];
 	NSArray* items = [list valueForKey:@"items"];
@@ -76,8 +76,8 @@
 	return [items objectAtIndex:0];	
 }
 
-- (int)listCountForIndex:(int)index {
-	NSLog(@"listCountForIndex:%d",index);	
+- (long)listCountForIndex:(long)index {
+	NSLog(@"listCountForIndex:%ld",index);
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:index];
 	NSArray* items = [list valueForKey:@"items"];
@@ -85,8 +85,8 @@
 	return  items.count;
 }
 
-- (int)doneCountForIndex:(int)index {
-	NSLog(@"doneCountForIndex:%d",index);	
+- (long)doneCountForIndex:(long)index {
+	NSLog(@"doneCountForIndex:%ld",index);	
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:index];
 	NSArray* items = [list valueForKey:@"done_items"];
@@ -106,39 +106,39 @@
 	[self save];
 }
 
-- (void)deleteList:(int)listIndex {
-	NSLog(@"deleteList:%d",listIndex);	
+- (void)deleteList:(long)listIndex {
+	NSLog(@"deleteList:%ld",listIndex);
 	NSMutableArray* lists = [self.database objectForKey:@"lists"];
 	[self save];		
 	[lists removeObjectAtIndex:listIndex];	
 	[self save];	
 }
 
-- (void)moveListFrom:(int)sourceIndex to:(int)destIndex {
+- (void)moveListFrom:(long)sourceIndex to:(long)destIndex {
 	NSMutableArray* lists = [self.database objectForKey:@"lists"];	
 	id list = [lists objectAtIndex:sourceIndex];
 	[lists removeObjectAtIndex:sourceIndex];
 	[lists insertObject:list atIndex:destIndex];
-	NSLog(@"%d->%d",sourceIndex,destIndex);
+	NSLog(@"%ld->%ld",sourceIndex,destIndex);
 	[self save];
 
 }
 
-- (NSString*)itemForList:(int)listIndex atIndex:(int)itemIndex {
+- (NSString*)itemForList:(long)listIndex atIndex:(long)itemIndex {
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:listIndex];
 	NSArray* items = [list valueForKey:@"items"];
 	return [items objectAtIndex:itemIndex];
 }
 
-- (NSString*)doneItemForList:(int)listIndex atIndex:(int)itemIndex {
+- (NSString*)doneItemForList:(long)listIndex atIndex:(long)itemIndex {
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:listIndex];
 	NSArray* items = [list valueForKey:@"done_items"];
 	return [items objectAtIndex:itemIndex];
 }
 
-- (int)checkItemForList:(int)listIndex atIndex:(NSString*)title {
+- (long)checkItemForList:(long)listIndex atIndex:(NSString*)title {
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:listIndex];
 	NSMutableArray* items = [list valueForKey:@"items"];
@@ -147,26 +147,26 @@
 		doneItems = [NSMutableArray array];
 		[list setValue:doneItems forKey:@"done_items"];
 	}
-	int index = [items indexOfObject:title];
+	long index = [items indexOfObject:title];
 	[items removeObjectAtIndex:index];
 	[doneItems insertObject:title atIndex:0];
 	[self save];	
 	return index;
 }
 
-- (int)uncheckItemForList:(int)listIndex atIndex:(NSString*)title {
+- (long)uncheckItemForList:(long)listIndex atIndex:(NSString*)title {
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:listIndex];
 	NSMutableArray* items = [list valueForKey:@"items"];
 	NSMutableArray* doneItems = [list valueForKey:@"done_items"];	
-	int index = [doneItems indexOfObject:title];
+	long index = [doneItems indexOfObject:title];
 	[doneItems removeObjectAtIndex:index];
 	[items insertObject:title atIndex:0];
 	[self save];	
 	return index;
 }
 
-- (void)addItem:(NSString *)title toList:(int)index {
+- (void)addItem:(NSString *)title toList:(long)index {
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:index];
 	NSMutableArray* items = [list valueForKey:@"items"];
@@ -174,38 +174,38 @@
 	[self save];	
 }
 
-- (int)renameItemOnList:(int)listIndex atIndex:(NSString *)itemID to:(NSString *)to {
+- (long)renameItemOnList:(long)listIndex atIndex:(NSString *)itemID to:(NSString *)to {
 	
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:listIndex];
 	NSMutableArray* items = [list valueForKey:@"items"];
-	int index = [items indexOfObject:itemID];
+	long index = [items indexOfObject:itemID];
 	[items replaceObjectAtIndex:index withObject:to];
 	[self save];	
 	return index;
 }
 
-- (int)deleteItemOnList:(int)listIndex atIndex:(NSString*)itemID {
+- (long)deleteItemOnList:(long)listIndex atIndex:(NSString*)itemID {
 	NSArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:listIndex];
 	NSMutableArray* items = [list valueForKey:@"items"];
-	int index = [items indexOfObject:itemID];
+	long index = [items indexOfObject:itemID];
 	[items removeObjectAtIndex:index];
 	[self save];	
 	return index;
 	
 }
 
-- (void)moveItemOnList:(int)listIndex from:(int)sourceIndex to:(int)destIndex {
+- (void)moveItemOnList:(long)listIndex from:(long)sourceIndex to:(long)destIndex {
 	NSMutableArray* lists = [self.database objectForKey:@"lists"];
 	NSDictionary* list = [lists objectAtIndex:listIndex];
 	NSMutableArray* items = [list valueForKey:@"items"];	
-	NSLog(@"count before = %d",items.count);
+	NSLog(@"count before = %ld",(unsigned long)items.count);
 	id item = [items objectAtIndex:sourceIndex];
 	[items removeObjectAtIndex:sourceIndex];
 	[items insertObject:item atIndex:destIndex];
-	NSLog(@"count after = %d",items.count);	
-	NSLog(@"%d->%d",sourceIndex,destIndex);
+	NSLog(@"count after = %ld",(unsigned long)items.count);
+	NSLog(@"%ld->%ld",sourceIndex,destIndex);
 	[self save];
 }
 
@@ -267,7 +267,7 @@
 	
 }
 
-- (void)setReminderForList:(int)listIndex type:(NSString*)type hour:(NSString*)hour minute:(NSString*)minute period:(NSString*)period {
+- (void)setReminderForList:(long)listIndex type:(NSString*)type hour:(NSString*)hour minute:(NSString*)minute period:(NSString*)period {
 	NSMutableArray* lists = [self.database objectForKey:@"lists"];
 	NSMutableDictionary* list = [lists objectAtIndex:listIndex];
 	

@@ -137,7 +137,7 @@
 		Model* model = [AppDelegate instance].model;
 		[cell refresh];
 		cell.nameLabel.text = [model listNameForIndex:indexPath.row];
-		cell.countLabel.text = [NSString stringWithFormat:@"%d",[model listCountForIndex:indexPath.row]];	
+		cell.countLabel.text = [NSString stringWithFormat:@"%ld",[model listCountForIndex:indexPath.row]];
 		cell.parent = self;
 		if ([model listCountForIndex:indexPath.row]>0) {
 			cell.detailLabel.text = [NSString stringWithFormat:@"Next Item - %@",[model nextItemForIndex:indexPath.row]];		
@@ -376,9 +376,9 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
 	Model* model = [AppDelegate instance].model;
 	
-	int sourceIndex = sourceIndexPath.row;
-	int destIndex = destinationIndexPath.row;
-	NSLog(@"move %d->%d",sourceIndex,destIndex);
+	long sourceIndex = sourceIndexPath.row;
+	long destIndex = destinationIndexPath.row;
+	NSLog(@"move %ld->%ld",sourceIndex,destIndex);
 	[model moveListFrom:sourceIndex to:destIndex];	
 }
 
@@ -411,7 +411,7 @@
 }
 
 - (void)hideDeleteButtonsExcluding:(MainCell*)cell {
-	int index = -1;
+	long index = -1;
 	
 	if (cell) {
 		NSIndexPath* cellIndexPath = [self.tableView indexPathForCell:cell];

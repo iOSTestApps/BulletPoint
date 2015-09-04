@@ -9,23 +9,23 @@
 #import <Foundation/Foundation.h>
 
 @interface Model : NSObject
-- (int)numberOfLists;
-- (NSString*)listNameForIndex:(int)index;
-- (NSDictionary*)listForIndex:(int)index;
-- (int)listCountForIndex:(int)index;
-- (int)doneCountForIndex:(int)index;
-- (NSString*)nextItemForIndex:(int)index;
+- (long)numberOfLists;
+- (NSString*)listNameForIndex:(long)index;
+- (NSDictionary*)listForIndex:(long)index;
+- (long)listCountForIndex:(long)index;
+- (long)doneCountForIndex:(long)index;
+- (NSString*)nextItemForIndex:(long)index;
 - (void)addList:(NSString*)listName;
-- (void)deleteList:(int)listIndex;
-- (void)moveListFrom:(int)sourceIndex to:(int)destIndex;
-- (NSString*)itemForList:(int)listIndex atIndex:(int)itemIndex;
-- (NSString*)doneItemForList:(int)listIndex atIndex:(int)itemIndex;
-- (int)checkItemForList:(int)listIndex atIndex:(NSString*)title; // TODO: use index
-- (int)uncheckItemForList:(int)listIndex atIndex:(NSString*)title; // TODO: use index
-- (void)addItem:(NSString*)title toList:(int)index;
-- (int)renameItemOnList:(int)listIndex atIndex:(NSString*)itemID to:(NSString*)to; // TODO: use index
-- (int)deleteItemOnList:(int)listIndex atIndex:(NSString*)itemID; // TODO: use index
-- (void)moveItemOnList:(int)listIndex from:(int)sourceIndex to:(int)destIndex;
+- (void)deleteList:(long)listIndex;
+- (void)moveListFrom:(long)sourceIndex to:(long)destIndex;
+- (NSString*)itemForList:(long)listIndex atIndex:(long)itemIndex;
+- (NSString*)doneItemForList:(long)listIndex atIndex:(long)itemIndex;
+- (long)checkItemForList:(long)listIndex atIndex:(NSString*)title; // TODO: use index
+- (long)uncheckItemForList:(long)listIndex atIndex:(NSString*)title; // TODO: use index
+- (void)addItem:(NSString*)title toList:(long)index;
+- (long)renameItemOnList:(long)listIndex atIndex:(NSString*)itemID to:(NSString*)to; // TODO: use index
+- (long)deleteItemOnList:(long)listIndex atIndex:(NSString*)itemID; // TODO: use index
+- (void)moveItemOnList:(long)listIndex from:(long)sourceIndex to:(long)destIndex;
 - (int)renameList:(NSString*)listID to:(NSString*)to;
-- (void)setReminderForList:(int)listIndex type:(NSString*)type hour:(NSString*)hour minute:(NSString*)minute period:(NSString*)period;
+- (void)setReminderForList:(long)listIndex type:(NSString*)type hour:(NSString*)hour minute:(NSString*)minute period:(NSString*)period;
 @end

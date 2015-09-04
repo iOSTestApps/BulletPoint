@@ -142,7 +142,7 @@
 }
 
 - (void)willTransitionToState:(UITableViewCellStateMask)state {
-	NSLog(@"wtts %d",state);
+	NSLog(@"wtts %lu",(unsigned long)state);
 	
 	//[self swiped:nil];
 	//[self updateForMove];

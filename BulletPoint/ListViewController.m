@@ -47,7 +47,7 @@
 @synthesize lastEditModeChangeTime = _lastEditModeChangeTime;
 @synthesize renamingListCell = _renamingListCell;
 
-- (id)initWithIndex:(int)index
+- (id)initWithIndex:(long)index
 {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
@@ -130,8 +130,8 @@
 
 	}
 	else if (section==1) {
-		int count = [model listCountForIndex:self.listIndex];
-		NSLog(@"rows in section : %d",count);
+		long count = [model listCountForIndex:self.listIndex];
+		NSLog(@"rows in section : %ld",count);
 		return count;
 	}
 	else if (section==2) {
@@ -143,7 +143,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"cell - %d,%d",indexPath.section,indexPath.row);
+	NSLog(@"cell - %ld,%ld",(long)indexPath.section,(long)indexPath.row);
 	Model* model = [AppDelegate instance].model;			
 	
 	if (indexPath.section==0) {
@@ -262,9 +262,9 @@
 	UITableViewRowAnimation animationType = UITableViewRowAnimationLeft;
 	
 	Model* model = [AppDelegate instance].model;				
-	int index = [model checkItemForList:self.listIndex atIndex:title];	
+	long index = [model checkItemForList:self.listIndex atIndex:title];
 	
-	int numItems = [model listCountForIndex:self.listIndex];
+	long numItems = [model listCountForIndex:self.listIndex];
 	if (numItems==0 || index==numItems) {
 		animationType = UITableViewRowAnimationNone;
 	}
@@ -284,7 +284,7 @@
 	if (!self.isEditingMode) {
 		[self.tableView beginUpdates];		
 		Model* model = [AppDelegate instance].model;	
-		int index = [model uncheckItemForList:self.listIndex atIndex:title];
+		long index = [model uncheckItemForList:self.listIndex atIndex:title];
 		NSArray* rows = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:2]];
 		[self.tableView deleteRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationRight];
 		NSArray* insertRows = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:1]];	
@@ -305,13 +305,13 @@
 	Model* model = [AppDelegate instance].model;	
 	
 	if ([to isEqualToString:@""]) {
-		int index = [model deleteItemOnList:self.listIndex atIndex:itemID];
+		long index = [model deleteItemOnList:self.listIndex atIndex:itemID];
 		
 		NSArray* rows = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:1]];
 		[self.tableView deleteRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationTop];
 	}
 	else {
-		int index = [model renameItemOnList:self.listIndex atIndex:itemID to:to];
+		long index = [model renameItemOnList:self.listIndex atIndex:itemID to:to];
 		
 		NSArray* rows = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:index inSection:1]];
 		[self.tableView reloadRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationNone];			
@@ -491,9 +491,9 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
 	NSLog(@"FINISHING MOVE");
 	if (self.isEditingMode) {
-		int sourceIndex = sourceIndexPath.row;
-		int destIndex = destinationIndexPath.row;
-		NSLog(@"%d -> %d",sourceIndex,destIndex);
+		long sourceIndex = sourceIndexPath.row;
+		long destIndex = destinationIndexPath.row;
+		NSLog(@"%ld -> %ld",sourceIndex,destIndex);
 		Model* model = [AppDelegate instance].model;	
 		[model moveItemOnList:self.listIndex from:sourceIndex to:destIndex];		
 	}
