@@ -19,7 +19,7 @@
 //@synthesize database = _database;
 @synthesize model = _model;
 
-AppDelegate* _instance = 0;
+AppDelegate* _instance = 0
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
