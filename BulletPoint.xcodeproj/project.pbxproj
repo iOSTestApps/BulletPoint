@@ -527,7 +527,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ed7336b7-6ec4-4c07-b167-212395b2b18b";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5914adb9-d790-4fe0-8761-d7a366454200";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
