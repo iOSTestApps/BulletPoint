@@ -160,6 +160,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    strcpy(0, "this is a bad bug");
 	
 	if (indexPath.row==0) {
 		self.reminder = YES;
