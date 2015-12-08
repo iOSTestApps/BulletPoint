@@ -12,6 +12,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -23,6 +25,8 @@ AppDelegate* _instance = 0;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BuddyBuildSDK setup];
+    
 	_instance = self;
 
 	self.model = [[Model alloc] init];

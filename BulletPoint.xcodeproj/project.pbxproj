@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8314B5191C169E3200F1D15A /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314B5181C169E3200F1D15A /* BuddyBuildSDK.framework */; };
+		8314B51B1C169EAC00F1D15A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314B51A1C169EAC00F1D15A /* CoreText.framework */; };
+		8314B51D1C169ED400F1D15A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314B51C1C169ED400F1D15A /* QuartzCore.framework */; };
 		83C76D8C1B99E7F400EAB19D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C76D8B1B99E7F400EAB19D /* Default-568h@2x.png */; };
 		E521D1B415A1BFD600730518 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E521D1B315A1BFD600730518 /* Default@2x.png */; };
 		E54AD70715C4B8680056356B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E54AD70615C4B8320056356B /* SVProgressHUD.m */; };
@@ -77,6 +80,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8314B5181C169E3200F1D15A /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		8314B51A1C169EAC00F1D15A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8314B51C1C169ED400F1D15A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		83C76D8B1B99E7F400EAB19D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E521D1B315A1BFD600730518 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E54AD70515C4B8320056356B /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
@@ -167,7 +173,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8314B51D1C169ED400F1D15A /* QuartzCore.framework in Frameworks */,
+				8314B51B1C169EAC00F1D15A /* CoreText.framework in Frameworks */,
 				E560243915A05C06001A2084 /* UIKit.framework in Frameworks */,
+				8314B5191C169E3200F1D15A /* BuddyBuildSDK.framework in Frameworks */,
 				E560243B15A05C06001A2084 /* Foundation.framework in Frameworks */,
 				E560243D15A05C06001A2084 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -202,6 +211,9 @@
 		E560243715A05C06001A2084 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8314B51C1C169ED400F1D15A /* QuartzCore.framework */,
+				8314B51A1C169EAC00F1D15A /* CoreText.framework */,
+				8314B5181C169E3200F1D15A /* BuddyBuildSDK.framework */,
 				E560243815A05C06001A2084 /* UIKit.framework */,
 				E560243A15A05C06001A2084 /* Foundation.framework */,
 				E560243C15A05C06001A2084 /* CoreGraphics.framework */,
@@ -504,6 +516,10 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BulletPoint/BulletPoint-Prefix.pch";
 				INFOPLIST_FILE = "BulletPoint/BulletPoint-Info.plist";
@@ -521,6 +537,10 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Accidental Software (Y48ERB5NAZ)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BulletPoint/BulletPoint-Prefix.pch";
 				INFOPLIST_FILE = "BulletPoint/BulletPoint-Info.plist";
