@@ -145,11 +145,11 @@
 	label.textColor = [UIColor blackColor];
 	UIFont *font = [UIFont boldSystemFontOfSize:24];
 	label.font = font;
-	label.textAlignment = UITextAlignmentCenter;	
+	label.textAlignment = NSTextAlignmentCenter;
 	
 	label.text = [self textForRow:row component:component];
 	if (component == 0) {
-		label.textAlignment = UITextAlignmentRight;			
+		label.textAlignment = NSTextAlignmentRight;
 	}
 
 	CGRect frame = label.frame;
