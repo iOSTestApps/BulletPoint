@@ -25,7 +25,7 @@ AppDelegate* _instance = 0;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UITextView appearance] setTextColor:[UIColor whiteColor]];
+//    [[UITextView appearance] setTextColor:[UIColor whiteColor]];
     [BuddyBuildSDK setup];
     
 	_instance = self;
