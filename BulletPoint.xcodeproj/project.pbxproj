@@ -404,7 +404,7 @@
 						TestTargetID = E560243315A05C06001A2084;
 					};
 					E560243315A05C06001A2084 = {
-						DevelopmentTeam = Y48ERB5NAZ;
+						DevelopmentTeam = XYL49Z8YJS;
 					};
 				};
 			};
